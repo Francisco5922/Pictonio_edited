@@ -12,7 +12,8 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   
-  background-image: url(/assets/img/back1.jpg);
+  background-image: url(/assets/img/backgrounds/back1.1.jpg);
+  background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.7);
   background-blend-mode: lighten;
 }
@@ -48,6 +49,7 @@ a:hover {
 .wrapper:hover .overlay{
     opacity: 1
 }
+
 /*Reveal on scroll*/
 .revealOnScroll { 
       
@@ -210,6 +212,7 @@ a:hover {
 #tecnologias {
   background: #34495e;
   color: #fff;
+  padding: 40px 0px;
 }
 #tecnologias p {
   line-height: 30px;
@@ -385,7 +388,8 @@ a:hover {
 
 #projetos img {
     max-width: 300px;
-    max-height: 100px;
+    padding: 30px;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -399,13 +403,21 @@ a:hover {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5 ease;
+    transition: .5s ease;
     background-color: white
-        
 }
 
 .wrapper:hover .overlay{
     opacity: 1
+}
+
+@media(max-width: 768px){
+  
+  .overlay{
+    background-color: white;
+    text-align: center;
+    
+  }
 }
 
 #projetos .projeto-subtitle{
@@ -457,8 +469,9 @@ a:hover {
   max-width: 160px;
 }
 
-#tecnologias .row.logos{
+#tecnologias .logos{
   white-space: nowrap;
+  padding: 150px 0px;
 }
 
 .vcenter {
@@ -468,14 +481,15 @@ a:hover {
 }
 
 @media (max-width: 768px){
+ 
   .vcenter {
     display: block;
     float: inital;
     margin-bottom: 20px;
   }
-  #tecnologias .row.logos{
+  #tecnologias .logos{
    white-space: normal;
-   padding: 0;
+   padding: 70px 0px;
   }
 
   #hero-area {
@@ -486,6 +500,7 @@ a:hover {
     display: none;
   }
 }
+
 
 #quemsomos img{
   margin-left: auto;
@@ -609,7 +624,7 @@ h1,h2,h3,h4{
 }
 
 
-/* Others */
+/* Others, reveal on scroll */
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 /*!
 Animate.css - https://daneden.me/animate
